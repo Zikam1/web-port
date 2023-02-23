@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-app :style="{background: $vuetify.theme.themes.dark.background}"></v-app>
+  <NavBar />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+
+// Components
+import NavBar from '../components/NavBar.vue';
 
 export default defineComponent({
   name: 'HomeView',
+
   components: {
-    HelloWorld,
+    NavBar,
   },
 });
 </script>
